@@ -9,11 +9,14 @@ import de from './locales/de'
 
 import en from './locales/en'
 
+import fr from './locales/fr'
+
 /**
  * ✏️ Then add it to the list here:
  */
 export {
   da,
   de,
-  en
+  en,
+  fr
 }
