@@ -204,7 +204,7 @@ const localizedValidationMessages = {
  * project.
  */
 export default function (instance) {
-  instance.extends({
+  instance.extend({
     locales: {
       [locale]: localizedValidationMessages
     }

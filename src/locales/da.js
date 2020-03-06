@@ -21,7 +21,7 @@ const locale = 'da'
  * need for these to be 1-1 with english, feel free to change the wording or
  * use/not use any of the variables available in the object or the
  * arguments for the message to make the most sense in your language and culture.
- * 
+ *
  * The validation context object includes the following properties:
  * {
  *   args        // Array of rule arguments: between:5,10 (args are ['5', '10'])
@@ -223,7 +223,7 @@ const localizedValidationMessages = {
  * project.
  */
 export default function (instance) {
-  instance.extends({
+  instance.extend({
     locales: {
       [locale]: localizedValidationMessages
     }
