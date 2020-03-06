@@ -1,7 +1,7 @@
 <p align="center"><a href="https://vueformulate.com" target="_blank" rel="noopener noreferrer"><img width="100" src="https://assets.wearebraid.com/vue-formulate/logo.png" alt="VueFormulate"></a></p>
 
 <p align="center">
-  <a href="https://travis-ci.org/wearebraid/vue-formulate"><img src="https://travis-ci.org/wearebraid/vue-formulate-i18n.svg?branch=master"></a>
+  <a href="https://travis-ci.org/wearebraid/vue-formulate-i18n"><img src="https://travis-ci.org/wearebraid/vue-formulate-i18n.svg?branch=master"></a>
   <a href="https://www.npmjs.com/package/@braid/vue-formulate-i18n"><img alt="npm" src="https://img.shields.io/npm/v/@braid/vue-formulate-i18n"></a>
   <a href="https://github.com/wearebraid/vue-formulate-i18n"><img alt="GitHub" src="https://img.shields.io/github/license/wearebraid/vue-formulate-i18n"></a>
 </p>

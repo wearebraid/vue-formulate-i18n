@@ -1,18 +1,19 @@
 import en from '@/locales/en'
 
-// ✏️ import the localized language
+// ✏️  Import the localized language
 import da from '@/locales/da'
 
-// ✏️ edit these to be the localized language
+// ✏️  Edit these to be the localized language
 const locale = da
 const localeName = 'da'
 
-describe('German translation', () => {
+// ✏️  Edit your locale's name
+describe('Danish translation', () => {
   it('exports a function', () => {
     expect(typeof en).toBe('function')
   })
 
-  it('calls extend on the formualte instance', () => {
+  it('calls extend on the formulate instance', () => {
     const instance = { extends: jest.fn() }
     en(instance)
     expect(instance.extends.mock.calls.length).toBe(1)
