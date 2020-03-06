@@ -6,10 +6,11 @@
   "module": "dist/locales.esm.js",
   "unpkg": "dist/locales.min.js",
   "scripts": {
-    "build": "npm run build:esm & npm run build:umd & npm run build:iife & wait && echo \"Build complete:\nesm: $(gzip -c dist/locales.esm.js | wc -c)b gzip\numd: $(gzip -c dist/locales.umd.js | wc -c)b gzip\nmin: $(gzip -c dist/locales.min.js | wc -c)b gzip\"",
+    "build": "npm run build:esm & npm run build:umd & npm run build:iife & npm run build:unpkg & wait && echo \"Build complete:\nesm: $(gzip -c dist/locales.esm.js | wc -c)b gzip\numd: $(gzip -c dist/locales.umd.js | wc -c)b gzip\nmin: $(gzip -c dist/locales.min.js | wc -c)b gzip\"",
     "build:esm": "rollup --config build/rollup.config.js --format es --file dist/locales.esm.js",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/locales.umd.js",
-    "build:iife": "./build/locales.sh",
+    "build:iife": "rollup --config build/rollup.config.js --format iife --file dist/locales.min.js",
+    "build:unpkg": "./build/locales.sh",
     "test": "NODE_ENV=test jest --config test/jest.conf.js",
     "test:watch": "NODE_ENV=test jest --config test/jest.conf.js --watch"
   },

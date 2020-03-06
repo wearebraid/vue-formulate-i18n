@@ -5,7 +5,7 @@ export default {
   input: 'src/locales.js', // Path relative to package.json
   output: [
     {
-      name: 'VueFormulatei18n',
+      name: 'VueFormulateI18n',
       exports: 'named'
     }
   ],
