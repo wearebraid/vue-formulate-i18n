@@ -10,7 +10,7 @@
     "build:esm": "rollup --config build/rollup.config.js --format es --file dist/locales.esm.js",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/locales.umd.js",
     "build:iife": "rollup --config build/rollup.config.js --format iife --file dist/locales.min.js",
-    "test": "jest",
+    "test": "NODE_ENV=test jest --config test/jest.conf.js",
     "test:watch": "NODE_ENV=test jest --config test/jest.conf.js --watch"
   },
   "repository": {
