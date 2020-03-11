@@ -37,7 +37,7 @@ const localizedValidationMessages = {
    * Valid accepted value.
    */
   accepted: function ({ name }) {
-    return `${name}には適切な値を入力してください。`
+    return `${name}を承認してください。`
   },
 
   /**
@@ -45,9 +45,9 @@ const localizedValidationMessages = {
    */
   after: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)}は${args[0]}より後の日時にしてください。`
+      return `${s(name)}は ${args[0]} 以降にしてください。`
     }
-    return `${s(name)}はより後の日時にしてください。`
+    return `${s(name)}はより後にしてください。`
   },
 
   /**
@@ -69,9 +69,9 @@ const localizedValidationMessages = {
    */
   before: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)}は${args[0]}より前の日時にしてください。`
+      return `${s(name)}は ${args[0]} 以前にしてください。`
     }
-    return `${s(name)}はより前の日時にしてください。`
+    return `${s(name)}はより前にしてください。`
   },
 
   /**
@@ -96,16 +96,16 @@ const localizedValidationMessages = {
    */
   date: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)}は有効な日時形式ではありません。${args[0]}フォーマットで入力してください。`
+      return `${s(name)}は有効な形式ではありません。次のフォーマットで入力してください: ${args[0]}`
     }
-    return `${s(name)}は有効な日時形式ではありません。`
+    return `${s(name)}は有効な形式ではありません。`
   },
 
   /**
    * The default render method for error messages.
    */
   default: function ({ name }) {
-    return `不正な値です。`
+    return `有効な値ではありません。`
   },
 
   /**
@@ -123,9 +123,9 @@ const localizedValidationMessages = {
    */
   endsWith: function ({ name, value }) {
     if (!value) {
-      return `末尾が不正です。`
+      return `有効な値で終わっていません。`
     }
-    return `“${value}” は末尾が不正です。`
+    return `“${value}” は有効な値で終わっていません。`
   },
 
   /**
@@ -133,16 +133,16 @@ const localizedValidationMessages = {
    */
   in: function ({ name, value }) {
     if (typeof value === 'string' && value) {
-      return `${name}に “${s(value)}” は含められません。`
+      return `“${s(value)}” は許可された${name}ではありません。`
     }
-    return `${name}に使用できない値が含まれています。`
+    return `許可された${name}ではありません。`
   },
 
   /**
    * Value is not a match.
    */
   matches: function ({ name }) {
-    return `${s(name)}の書式が不正です。`
+    return `${s(name)}は許可された値ではありません。`
   },
 
   /**
@@ -150,7 +150,7 @@ const localizedValidationMessages = {
    */
   max: function ({ name, value, args }) {
     if (Array.isArray(value)) {
-      return `${name}は${args[0]}個まで選択できます。`
+      return `${name}は${args[0]}項目しか選択できません。`
     }
     const force = Array.isArray(args) && args[1] ? args[1] : false
     if ((!isNaN(value) && force !== 'length') || force === 'value') {
@@ -171,11 +171,11 @@ const localizedValidationMessages = {
    */
   min: function ({ name, value, args }) {
     if (Array.isArray(value)) {
-      return `${name}は${args[0]}個以上選択してください。`
+      return `${name}は${args[0]}項目以上選択してください。`
     }
     const force = Array.isArray(args) && args[1] ? args[1] : false
     if ((!isNaN(value) && force !== 'length') || force === 'value') {
-      return `${s(name)}は${args[0]}個以上でなければなりません。`
+      return `${s(name)}は${args[0]}以上でなければなりません。`
     }
     return `${s(name)}は${args[0]}文字以上でなければなりません。`
   },
@@ -184,7 +184,7 @@ const localizedValidationMessages = {
    * The field is not an allowed value
    */
   not: function ({ name, value }) {
-    return `${name}に “${value}” は許可されていません。`
+    return `“${value}” は許可された${name}ではありません。`
   },
 
   /**
