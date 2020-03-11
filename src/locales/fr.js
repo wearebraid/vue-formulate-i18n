@@ -119,6 +119,16 @@ const localizedValidationMessages = {
   },
 
   /**
+   * Ends with specified value
+   */
+  endsWith: function ({ name, value }) {
+    if (!value) {
+      return `Ce champ ne termine pas par une valeur correcte.`
+    }
+    return `“${value}” ne termine pas par une valeur correcte.`
+  },
+
+  /**
    * Value is an allowed value.
    */
   in: function ({ name, value }) {
@@ -192,13 +202,6 @@ const localizedValidationMessages = {
   },
 
   /**
-   * Value is not a url.
-   */
-  url: function ({ name }) {
-    return `Merci d'entrer une URL valide.`
-  },
-
-  /**
    * Starts with specified value
    */
   startsWith: function ({ name, value }) {
@@ -209,13 +212,10 @@ const localizedValidationMessages = {
   },
 
   /**
-   * Ends with specified value
+   * Value is not a url.
    */
-  endsWith: function ({ name, value }) {
-    if (!value) {
-      return `Ce champ ne termine pas par une valeur correcte.`
-    }
-    return `“${value}” ne termine pas par une valeur correcte.`
+  url: function ({ name }) {
+    return `Merci d'entrer une URL valide.`
   }
 }
 
