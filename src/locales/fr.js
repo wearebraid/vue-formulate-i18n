@@ -105,7 +105,7 @@ const localizedValidationMessages = {
    * The default render method for error messages.
    */
   default: function ({ name }) {
-    return `This field isn’t valid.`
+    return `Ce champ n'est pas valide.`
   },
 
   /**
@@ -113,7 +113,7 @@ const localizedValidationMessages = {
    */
   email: function ({ name, value }) {
     if (!value) {
-      return 'Merci d\'entrer une addresse email valide.'
+      return 'Merci d\'entrer une adresse email valide.'
     }
     return `“${value}” n'est pas une adresse email valide.`
   },
@@ -174,7 +174,7 @@ const localizedValidationMessages = {
    * The field is not an allowed value
    */
   not: function ({ name, value }) {
-    return `“${value}” is not an allowed ${name}.`
+    return `“${value}” n'est pas un(e) ${name} autorisé(e).`
   },
 
   /**
@@ -196,6 +196,26 @@ const localizedValidationMessages = {
    */
   url: function ({ name }) {
     return `Merci d'entrer une URL valide.`
+  },
+
+  /**
+   * Starts with specified value
+   */
+  startsWith: function ({ name, value }) {
+    if (!value) {
+      return `Ce champ ne commence pas par une valeur correcte.`
+    }
+    return `“${value}” ne commence pas par une valeur correcte.`
+  },
+
+  /**
+   * Ends with specified value
+   */
+  endsWith: function ({ name, value }) {
+    if (!value) {
+      return `Ce champ ne termine pas par une valeur correcte.`
+    }
+    return `“${value}” ne termine pas par une valeur correcte.`
   }
 }
 
