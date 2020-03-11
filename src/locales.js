@@ -11,6 +11,8 @@ import en from './locales/en'
 
 import fr from './locales/fr'
 
+import ja from './locales/ja'
+
 import pt from './locales/pt'
 
 /**
@@ -21,5 +23,6 @@ export {
   de,
   en,
   fr,
+  ja,
   pt
 }
