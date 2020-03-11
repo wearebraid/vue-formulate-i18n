@@ -15,15 +15,12 @@ describe('French translation', () => {
     expect(instance.extend.mock.calls.length).toBe(1)
   })
 
-  /**
-   * @todo - currently missing startsWith and endsWith
-   */
-  // it('includes all the validation results that english does', () => {
-  //   const instance = { extend: jest.fn() }
-  //   locales.en(instance)
-  //   locales[locale](instance)
-  //   const englishMessages = Object.keys(instance.extend.mock.calls[0][0].locales.en)
-  //   const localizedMessages = Object.keys(instance.extend.mock.calls[1][0].locales[locale])
-  //   expect(englishMessages).toEqual(localizedMessages)
-  // })
+  it('includes all the validation results that english does', () => {
+    const instance = { extend: jest.fn() }
+    locales.en(instance)
+    locales[locale](instance)
+    const englishMessages = Object.keys(instance.extend.mock.calls[0][0].locales.en)
+    const localizedMessages = Object.keys(instance.extend.mock.calls[1][0].locales[locale])
+    expect(englishMessages).toEqual(localizedMessages)
+  })
 })
