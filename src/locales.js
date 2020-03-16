@@ -15,14 +15,17 @@ import ja from './locales/ja'
 
 import pt from './locales/pt'
 
+import it from './locales/it'
+
 /**
  * ✏️ Then add it to the list here:
  */
 export {
-  da,
-  de,
-  en,
-  fr,
-  ja,
-  pt
+	da,
+	de,
+	en,
+	fr,
+	ja,
+	pt,
+	it
 }
