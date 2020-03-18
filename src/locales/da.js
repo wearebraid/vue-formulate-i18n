@@ -32,16 +32,16 @@ const locale = 'da'
  * }
  */
 const localizedValidationMessages = {
- /**
-  * Valid accepted value.
-  */
+  /**
+   * Valid accepted value.
+   */
   accepted: function ({ name }) {
     return `Accepter venligst ${name}.`
   },
 
   /**
-  * The date is not after.
-  */
+   * The date is not after.
+   */
   after: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
       return `${s(name)} skal være efter ${args[0]}.`
@@ -50,22 +50,22 @@ const localizedValidationMessages = {
   },
 
   /**
-  * The value is not a letter.
-  */
+   * The value is not a letter.
+   */
   alpha: function ({ name }) {
     return `${s(name)} kan kun indeholde bogstaver.`
   },
 
   /**
-  * Rule: checks if the value is alpha numeric
-  */
+   * Rule: checks if the value is alpha numeric
+   */
   alphanumeric: function ({ name }) {
     return `${s(name)} kan kun indeholde bogstaver og tal.`
   },
 
   /**
-  * The date is not before.
-  */
+   * The date is not before.
+   */
   before: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
       return `${s(name)} skal være før ${args[0]}.`
@@ -74,25 +74,26 @@ const localizedValidationMessages = {
   },
 
   /**
-  * The value is not between two numbers or lengths
-  */
+   * The value is not between two numbers or lengths
+   */
   between: function ({ name, value, args }) {
-    if (!isNaN(value)) {
+    const force = Array.isArray(args) && args[2] ? args[2] : false
+    if ((!isNaN(value) && force !== 'length') || force === 'value') {
       return `${s(name)} skal være mellem ${args[0]} og ${args[1]}.`
     }
     return `${s(name)} skal være mellem ${args[0]} og ${args[1]} tegn.`
   },
 
   /**
-  * The confirmation field does not match
-  */
+   * The confirmation field does not match
+   */
   confirm: function ({ name, args }) {
     return `${s(name)} matcher ikke.`
   },
 
   /**
-  * Is not a valid date.
-  */
+   * Is not a valid date.
+   */
   date: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
       return `${s(name)} er ikke gyldig, brug venligst formatet ${args[0]}`
@@ -101,15 +102,15 @@ const localizedValidationMessages = {
   },
 
   /**
-  * The default render method for error messages.
-  */
+   * The default render method for error messages.
+   */
   default: function ({ name }) {
     return `Dette felt er ikke gyldigt.`
   },
 
   /**
-  * Is not a valid email address.
-  */
+   * Is not a valid email address.
+   */
   email: function ({ name, value }) {
     if (!value) {
       return 'Indtast venligst en gyldig email-adresse.'
@@ -118,8 +119,8 @@ const localizedValidationMessages = {
   },
 
   /**
-  * Ends with specified value
-  */
+   * Ends with specified value
+   */
   endsWith: function ({ name, value }) {
     if (!value) {
       return `Dette felt slutter ikke med en gyldig værdi.`
@@ -128,8 +129,8 @@ const localizedValidationMessages = {
   },
 
   /**
-  * Value is an allowed value.
-  */
+   * Value is an allowed value.
+   */
   in: function ({ name, value }) {
     if (typeof value === 'string' && value) {
       return `“${s(value)}” er ikke en tilladt ${name}.`
@@ -138,15 +139,15 @@ const localizedValidationMessages = {
   },
 
   /**
-  * Value is not a match.
-  */
+   * Value is not a match.
+   */
   matches: function ({ name }) {
     return `${s(name)} er ikke en gyldig værdi.`
   },
 
   /**
-  * The maximum value allowed.
-  */
+   * The maximum value allowed.
+   */
   max: function ({ name, value, args }) {
     if (Array.isArray(value)) {
       return `Du kan kun vælge ${args[0]} ${name}.`
@@ -159,15 +160,15 @@ const localizedValidationMessages = {
   },
 
   /**
-  * The (field-level) error message for mime errors.
-  */
+   * The (field-level) error message for mime errors.
+   */
   mime: function ({ name, args }) {
     return `${s(name)} skal være af typen: ${args[0] || 'Ingen tilladte filformater.'}`
   },
 
   /**
-  * The maximum value allowed.
-  */
+   * The maximum value allowed.
+   */
   min: function ({ name, value, args }) {
     if (Array.isArray(value)) {
       return `Du skal vælge mindst ${args[0]} ${name}.`
@@ -180,29 +181,29 @@ const localizedValidationMessages = {
   },
 
   /**
-  * The field is not an allowed value
-  */
+   * The field is not an allowed value
+   */
   not: function ({ name, value }) {
     return `“${value}” er ikke en gyldig ${name}.`
   },
 
   /**
-  * The field is not a number
-  */
+   * The field is not a number
+   */
   number: function ({ name }) {
     return `${s(name)} skal være et tal.`
   },
 
   /**
-  * Required field.
-  */
+   * Required field.
+   */
   required: function ({ name }) {
     return `${s(name)} er påkrævet.`
   },
 
   /**
-  * Starts with specified value
-  */
+   * Starts with specified value
+   */
   startsWith: function ({ name, value }) {
     if (!value) {
       return `Dette felt starter ikke med en gyldig værdi.`
@@ -211,8 +212,8 @@ const localizedValidationMessages = {
   },
 
   /**
-  * Value is not a url.
-  */
+   * Value is not a url.
+   */
   url: function ({ name }) {
     return `Indtast venligst en gyldig URL.`
   }
