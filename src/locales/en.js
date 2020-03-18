@@ -79,7 +79,7 @@ const localizedValidationMessages = {
    */
   between: function ({ name, value, args }) {
     const force = Array.isArray(args) && args[2] ? args[2] : false
-    if (!isNaN(value) || force === 'value') {
+    if ((!isNaN(value) && force !== 'length') || force === 'value') {
       return `${s(name)} must be between ${args[0]} and ${args[1]}.`
     }
     return `${s(name)} must be between ${args[0]} and ${args[1]} characters long.`
