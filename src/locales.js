@@ -17,6 +17,8 @@ import pt from './locales/pt'
 
 import it from './locales/it'
 
+import ar from './locales/ar'
+
 /**
  * ✏️ Then add it to the list here:
  */
@@ -27,5 +29,6 @@ export {
 	fr,
 	ja,
 	pt,
-	it
+	it,
+	ar
 }
