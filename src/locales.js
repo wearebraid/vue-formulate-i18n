@@ -19,7 +19,7 @@ import it from './locales/it'
 
 import ar from './locales/ar'
 
-import nl from "./locales/nl";
+import nl from './locales/nl'
 
 /**
  * ✏️ Then add it to the list here:

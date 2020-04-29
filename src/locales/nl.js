@@ -14,7 +14,7 @@ import { sentence as s } from "../libs/formats";
  * en
  * en-GB
  */
-const locale = "nl";
+const locale = 'nl';
 
 /**
  * This is an object of functions that each produce valid responses. There's no
