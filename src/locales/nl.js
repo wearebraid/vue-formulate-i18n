@@ -3,7 +3,7 @@
  * language. Feel free to add additional helper methods to libs/formats if it
  * assists in creating good validation messages for your locale.
  */
-import { sentence as s } from "../libs/formats";
+import { sentence as s } from '../libs/formats'
 
 /**
  * This is the ISO 639-1 and (optionally) ISO 639-2 language "tag".
@@ -14,7 +14,7 @@ import { sentence as s } from "../libs/formats";
  * en
  * en-GB
  */
-const locale = 'nl';
+const locale = 'nl'
 
 /**
  * This is an object of functions that each produce valid responses. There's no
