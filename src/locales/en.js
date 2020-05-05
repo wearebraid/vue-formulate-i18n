@@ -97,7 +97,7 @@ const localizedValidationMessages = {
    */
   date: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)} is not a valid, please use the format ${args[0]}`
+      return `${s(name)} is not a valid date, please use the format ${args[0]}`
     }
     return `${s(name)} is not a valid date.`
   },
