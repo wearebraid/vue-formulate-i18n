@@ -13,6 +13,8 @@ import fr from './locales/fr'
 
 import ja from './locales/ja'
 
+import ko from './locales/ko'
+
 import pt from './locales/pt'
 
 import it from './locales/it'
@@ -30,6 +32,7 @@ export {
 	en,
 	fr,
 	ja,
+	ko,
 	pt,
 	it,
 	ar,
