@@ -176,9 +176,9 @@ const localizedValidationMessages = {
     }
     const force = Array.isArray(args) && args[1] ? args[1] : false
     if ((!isNaN(value) && force !== 'length') || force === 'value') {
-      return `${s(name)} must be more than ${args[0]}.`
+      return `${s(name)} must be at least ${args[0]}.`
     }
-    return `${s(name)} must be more than ${args[0]} characters long.`
+    return `${s(name)} must be at least ${args[0]} characters long.`
   },
 
   /**
