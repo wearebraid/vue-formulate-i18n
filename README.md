@@ -19,4 +19,4 @@ contains a growing list of language support.
 
 We’d love to accept pull requests for additional languages, or even just typos.
 
-[Please read the contribution guide](https://www.vueformulate.com/contributing)
+[Please read the contribution guide](https://vueformulate.com/guide/contributing/#internationalization)
