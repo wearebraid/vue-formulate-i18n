@@ -17,6 +17,8 @@ import ko from './locales/ko'
 
 import pt from './locales/pt'
 
+import ru from './locales/ru'
+
 import it from './locales/it'
 
 import ar from './locales/ar'
@@ -34,6 +36,7 @@ export {
 	ja,
 	ko,
 	pt,
+	ru,
 	it,
 	ar,
 	nl
