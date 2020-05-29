@@ -9,6 +9,8 @@ import de from './locales/de'
 
 import en from './locales/en'
 
+import es from './locales/es'
+
 import fr from './locales/fr'
 
 import ja from './locales/ja'
@@ -25,22 +27,20 @@ import ar from './locales/ar'
 
 import nl from './locales/nl'
 
-import es from './locales/es'
-
 /**
  * ✏️ Then add it to the list here:
  */
 export {
-	da,
-	de,
-	en,
-	fr,
-	ja,
-	ko,
-	pt,
-	ru,
-	it,
-	ar,
-  nl,
-  es
+  da,
+  de,
+  en,
+  es,
+  fr,
+  ja,
+  ko,
+  pt,
+  ru,
+  it,
+  ar,
+  nl
 }

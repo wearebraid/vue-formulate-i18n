@@ -6,7 +6,7 @@
 import { sentence as s } from '../libs/formats'
 
 /**
- * This is the ISO 639-1 and (optionally) ISO 639-2 language "tag".
+ * This is the ISO 639-1 and (optionally) ISO 639-2 language 'tag'.
  * Some valid examples:
  * zh
  * zh-CN
@@ -36,7 +36,7 @@ const localizedValidationMessages = {
    * Valid accepted value.
    */
   accepted: function ({ name }) {
-    return `Sta ${name} toe.`;
+    return `Sta ${name} toe.`
   },
 
   /**
@@ -44,23 +44,23 @@ const localizedValidationMessages = {
    */
   after: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)} moet na ${args[0]} zijn.`;
+      return `${s(name)} moet na ${args[0]} zijn.`
     }
-    return `${s(name)} moet een latere datum zijn.`;
+    return `${s(name)} moet een latere datum zijn.`
   },
 
   /**
    * The value is not a letter.
    */
   alpha: function ({ name }) {
-    return `${s(name)} mag enkel letters bevatten.`;
+    return `${s(name)} mag enkel letters bevatten.`
   },
 
   /**
    * Rule: checks if the value is alpha numeric
    */
   alphanumeric: function ({ name }) {
-    return `${s(name)} mag enkel letters en cijfers bevatten.`;
+    return `${s(name)} mag enkel letters en cijfers bevatten.`
   },
 
   /**
@@ -68,29 +68,29 @@ const localizedValidationMessages = {
    */
   before: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)} moet voor ${args[0]} zijn.`;
+      return `${s(name)} moet voor ${args[0]} zijn.`
     }
-    return `${s(name)} moet een eerdere datum zijn.`;
+    return `${s(name)} moet een eerdere datum zijn.`
   },
 
   /**
    * The value is not between two numbers or lengths
    */
   between: function ({ name, value, args }) {
-    const force = Array.isArray(args) && args[2] ? args[2] : false;
-    if ((!isNaN(value) && force !== "length") || force === "value") {
-      return `${s(name)} moet tussen ${args[0]} en ${args[1]} zitten.`;
+    const force = Array.isArray(args) && args[2] ? args[2] : false
+    if ((!isNaN(value) && force !== 'length') || force === 'value') {
+      return `${s(name)} moet tussen ${args[0]} en ${args[1]} zitten.`
     }
     return `${s(name)} moet tussen ${args[0]} en ${
       args[1]
-    } lang zijn.`;
+    } lang zijn.`
   },
 
   /**
    * The confirmation field does not match
    */
   confirm: function ({ name, args }) {
-    return `${s(name)} komt niet overeen.`;
+    return `${s(name)} komt niet overeen.`
   },
 
   /**
@@ -98,16 +98,16 @@ const localizedValidationMessages = {
    */
   date: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)} is geen geldige datum, het juiste format is ${args[0]}`;
+      return `${s(name)} is geen geldige datum, het juiste format is ${args[0]}`
     }
-    return `${s(name)} is geen geldige datum.`;
+    return `${s(name)} is geen geldige datum.`
   },
 
   /**
    * The default render method for error messages.
    */
   default: function ({ name }) {
-    return `De invoer voor dit veld is niet geldig`;
+    return `De invoer voor dit veld is niet geldig`
   },
 
   /**
@@ -115,9 +115,9 @@ const localizedValidationMessages = {
    */
   email: function ({ name, value }) {
     if (!value) {
-      return "Voer een geldig e-mailadres in.";
+      return 'Voer een geldig e-mailadres in.'
     }
-    return `“${value}” is geen geldig e-mailadres.`;
+    return `“${value}” is geen geldig e-mailadres.`
   },
 
   /**
@@ -125,26 +125,26 @@ const localizedValidationMessages = {
    */
   endsWith: function ({ name, value }) {
     if (!value) {
-      return `Dit veld eindigt niet op een geldige waarde.`;
+      return `Dit veld eindigt niet op een geldige waarde.`
     }
-    return `“${value}” eindigt niet op een geldige waarde.`;
+    return `“${value}” eindigt niet op een geldige waarde.`
   },
 
   /**
    * Value is an allowed value.
    */
   in: function ({ name, value }) {
-    if (typeof value === "string" && value) {
-      return `“${s(value)}” is niet toegestaan als ${name}.`;
+    if (typeof value === 'string' && value) {
+      return `“${s(value)}” is niet toegestaan als ${name}.`
     }
-    return `Deze ${name} is niet toegestaan.`;
+    return `Deze ${name} is niet toegestaan.`
   },
 
   /**
    * Value is not a match.
    */
   matches: function ({ name }) {
-    return `${s(name)} is niet toegestaan.`;
+    return `${s(name)} is niet toegestaan.`
   },
 
   /**
@@ -152,15 +152,15 @@ const localizedValidationMessages = {
    */
   max: function ({ name, value, args }) {
     if (Array.isArray(value)) {
-      return `Je kunt maximaal ${args[0]} selecteren als ${name}.`;
+      return `Je kunt maximaal ${args[0]} selecteren als ${name}.`
     }
-    const force = Array.isArray(args) && args[1] ? args[1] : false;
-    if ((!isNaN(value) && force !== "length") || force === "value") {
-      return `${s(name)} moet kleiner of gelijk zijn aan ${args[0]}.`;
+    const force = Array.isArray(args) && args[1] ? args[1] : false
+    if ((!isNaN(value) && force !== 'length') || force === 'value') {
+      return `${s(name)} moet kleiner of gelijk zijn aan ${args[0]}.`
     }
     return `${s(name)} mag maximaal ${
       args[0]
-    } karakters bevatten.`;
+    } karakters bevatten.`
   },
 
   /**
@@ -168,8 +168,8 @@ const localizedValidationMessages = {
    */
   mime: function ({ name, args }) {
     return `${s(name)} moet van dit type zijn: ${
-      args[0] || "Bestanden zijn niet toegestaan"
-    }`;
+      args[0] || 'Bestanden zijn niet toegestaan'
+    }`
   },
 
   /**
@@ -177,34 +177,34 @@ const localizedValidationMessages = {
    */
   min: function ({ name, value, args }) {
     if (Array.isArray(value)) {
-      return `Je moet tenminste ${args[0]} selecteren als ${name}.`;
+      return `Je moet tenminste ${args[0]} selecteren als ${name}.`
     }
-    const force = Array.isArray(args) && args[1] ? args[1] : false;
-    if ((!isNaN(value) && force !== "length") || force === "value") {
-      return `${s(name)} moet groter zijn dan ${args[0]}.`;
+    const force = Array.isArray(args) && args[1] ? args[1] : false
+    if ((!isNaN(value) && force !== 'length') || force === 'value') {
+      return `${s(name)} moet groter zijn dan ${args[0]}.`
     }
-    return `${s(name)} moet meer dan ${args[0]} karakters bevatten.`;
+    return `${s(name)} moet meer dan ${args[0]} karakters bevatten.`
   },
 
   /**
    * The field is not an allowed value
    */
   not: function ({ name, value }) {
-    return `“${value}” is geen geldige ${name}.`;
+    return `“${value}” is geen geldige ${name}.`
   },
 
   /**
    * The field is not a number
    */
   number: function ({ name }) {
-    return `${s(name)} moet een getal zijn.`;
+    return `${s(name)} moet een getal zijn.`
   },
 
   /**
    * Required field.
    */
   required: function ({ name }) {
-    return `${s(name)} is verplicht.`;
+    return `${s(name)} is verplicht.`
   },
 
   /**
@@ -212,18 +212,18 @@ const localizedValidationMessages = {
    */
   startsWith: function ({ name, value }) {
     if (!value) {
-      return `Dit veld begint niet met een geldige waarde.`;
+      return `Dit veld begint niet met een geldige waarde.`
     }
-    return `“${value}” begint niet met een geldige waarde.`;
+    return `“${value}” begint niet met een geldige waarde.`
   },
 
   /**
    * Value is not a url.
    */
   url: function ({ name }) {
-    return `Voer een geldige URL in.`;
-  },
-};
+    return `Voer een geldige URL in.`
+  }
+}
 
 /**
  * This creates a vue-formulate plugin that can be imported and used on each
@@ -232,7 +232,7 @@ const localizedValidationMessages = {
 export default function (instance) {
   instance.extend({
     locales: {
-      [locale]: localizedValidationMessages,
-    },
-  });
+      [locale]: localizedValidationMessages
+    }
+  })
 }
