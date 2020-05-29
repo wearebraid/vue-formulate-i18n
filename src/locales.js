@@ -25,6 +25,8 @@ import ar from './locales/ar'
 
 import nl from './locales/nl'
 
+import es from './locales/es'
+
 /**
  * ✏️ Then add it to the list here:
  */
@@ -39,5 +41,6 @@ export {
 	ru,
 	it,
 	ar,
-	nl
+  nl,
+  es
 }
