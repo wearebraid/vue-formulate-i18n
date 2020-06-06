@@ -23,6 +23,8 @@ import ru from './locales/ru'
 
 import it from './locales/it'
 
+import he from './locales/he'
+
 import ar from './locales/ar'
 
 import nl from './locales/nl'
