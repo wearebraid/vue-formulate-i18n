@@ -43,6 +43,7 @@ export {
   pt,
   ru,
   it,
+  he,
   ar,
   nl
 }

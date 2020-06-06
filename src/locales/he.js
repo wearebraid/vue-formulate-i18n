@@ -37,7 +37,7 @@ const localizedValidationMessages = {
    * Valid accepted value.
    */
   accepted: function ({ name }) {
-    return `Please accept the ${name}.`
+    return `אנא קבל את ה${name}.`
   },
 
   /**
@@ -45,23 +45,23 @@ const localizedValidationMessages = {
    */
   after: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)} must be after ${args[0]}.`
+      return `${s(name)} חייב להיות אחרי ${args[0]}.`
     }
-    return `${s(name)} must be a later date.`
+    return `${s(name)} חייב להיות תאריך יותר מאוחר.`
   },
 
   /**
    * The value is not a letter.
    */
   alpha: function ({ name }) {
-    return `${s(name)} can only contain alphabetical characters.`
+    return `${s(name)} יכול להכיל אותיות בלבד.`
   },
 
   /**
    * Rule: checks if the value is alpha numeric
    */
   alphanumeric: function ({ name }) {
-    return `${s(name)} can only contain letters and numbers.`
+    return `${s(name)} יכול להכיל אותיות ומספרים בלבד.`
   },
 
   /**
@@ -69,9 +69,9 @@ const localizedValidationMessages = {
    */
   before: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)} must be before ${args[0]}.`
+      return `${s(name)} חייב להיות לפני ${args[0]}.`
     }
-    return `${s(name)} must be an earlier date.`
+    return `${s(name)} חייב להיות תאריך יותר מוקדם.`
   },
 
   /**
@@ -80,16 +80,16 @@ const localizedValidationMessages = {
   between: function ({ name, value, args }) {
     const force = Array.isArray(args) && args[2] ? args[2] : false
     if ((!isNaN(value) && force !== 'length') || force === 'value') {
-      return `${s(name)} must be between ${args[0]} and ${args[1]}.`
+      return `${s(name)} חייב להיות בין ${args[0]} ו-${args[1]}.`
     }
-    return `${s(name)} must be between ${args[0]} and ${args[1]} characters long.`
+    return `${s(name)} חייב להיות בין ${args[0]} ו-${args[1]} אותיות.`
   },
 
   /**
    * The confirmation field does not match
    */
   confirm: function ({ name, args }) {
-    return `${s(name)} does not match.`
+    return `${s(name)} אינו תואם.`
   },
 
   /**
@@ -97,16 +97,16 @@ const localizedValidationMessages = {
    */
   date: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)} is not a valid date, please use the format ${args[0]}`
+      return `${s(name)} אינו תאריך תקין, אנא השתמש בפורמט ${args[0]}`
     }
-    return `${s(name)} is not a valid date.`
+    return `${s(name)} אינו תאריך תקין.`
   },
 
   /**
    * The default render method for error messages.
    */
   default: function ({ name }) {
-    return `This field isn’t valid.`
+    return `השדה אינו תקין.`
   },
 
   /**
@@ -114,9 +114,9 @@ const localizedValidationMessages = {
    */
   email: function ({ name, value }) {
     if (!value) {
-      return 'Please enter a valid email address.'
+      return 'אנא הכנס כתובת אימייל תקין.'
     }
-    return `“${value}” is not a valid email address.`
+    return `“${value}” אינו כתובת אימייל תקין.`
   },
 
   /**
@@ -124,9 +124,9 @@ const localizedValidationMessages = {
    */
   endsWith: function ({ name, value }) {
     if (!value) {
-      return `This field doesn’t end with a valid value.`
+      return `שדה זו אינו מסתיים בערך תקין.`
     }
-    return `“${value}” doesn’t end with a valid value.`
+    return `“${value}” אינו מסתיים בערך תקין.`
   },
 
   /**
@@ -134,16 +134,16 @@ const localizedValidationMessages = {
    */
   in: function ({ name, value }) {
     if (typeof value === 'string' && value) {
-      return `“${s(value)}” is not an allowed ${name}.`
+      return `“${s(value)}” אינו ${name} מורשה.`
     }
-    return `This is not an allowed ${name}.`
+    return `ערך זו איננו ${name} מורשה.`
   },
 
   /**
    * Value is not a match.
    */
   matches: function ({ name }) {
-    return `${s(name)} is not an allowed value.`
+    return `${s(name)} אינו ערך מורשה.`
   },
 
   /**
@@ -151,20 +151,20 @@ const localizedValidationMessages = {
    */
   max: function ({ name, value, args }) {
     if (Array.isArray(value)) {
-      return `You may only select ${args[0]} ${name}.`
+      return `אתה יכול לבחור רק ${args[0]} ${name}.`
     }
     const force = Array.isArray(args) && args[1] ? args[1] : false
     if ((!isNaN(value) && force !== 'length') || force === 'value') {
-      return `${s(name)} must be less than or equal to ${args[0]}.`
+      return `${s(name)} חייב להיות פחות או שוה ל-${args[0]}.`
     }
-    return `${s(name)} must be less than or equal to ${args[0]} characters long.`
+    return `${s(name)} חייב להיות פחות או שוה ל-${args[0]} אותיות.`
   },
 
   /**
    * The (field-level) error message for mime errors.
    */
   mime: function ({ name, args }) {
-    return `${s(name)} must be of the the type: ${args[0] || 'No file formats allowed.'}`
+    return `${s(name)} חייב להיות מסוג של: ${args[0] || 'סוגי קבצים לא מורשים.'}`
   },
 
   /**
@@ -172,34 +172,34 @@ const localizedValidationMessages = {
    */
   min: function ({ name, value, args }) {
     if (Array.isArray(value)) {
-      return `You need at least ${args[0]} ${name}.`
+      return `אתה צריך לפחות ${args[0]} ${name}.`
     }
     const force = Array.isArray(args) && args[1] ? args[1] : false
     if ((!isNaN(value) && force !== 'length') || force === 'value') {
-      return `${s(name)} must be at least ${args[0]}.`
+      return `${s(name)} חייב להיות לפחות ${args[0]}.`
     }
-    return `${s(name)} must be at least ${args[0]} characters long.`
+    return `${s(name)} חייב להיות לפחות ${args[0]} אותיות.`
   },
 
   /**
    * The field is not an allowed value
    */
   not: function ({ name, value }) {
-    return `“${value}” is not an allowed ${name}.`
+    return `“${value}” אינו ${name} מורשה.`
   },
 
   /**
    * The field is not a number
    */
   number: function ({ name }) {
-    return `${s(name)} must be a number.`
+    return `${s(name)} חייב להיות מספר.`
   },
 
   /**
    * Required field.
    */
   required: function ({ name }) {
-    return `${s(name)} is required.`
+    return `${s(name)} נדרש.`
   },
 
   /**
@@ -207,16 +207,16 @@ const localizedValidationMessages = {
    */
   startsWith: function ({ name, value }) {
     if (!value) {
-      return `This field doesn’t start with a valid value.`
+      return `שדה זה אינו מתחיל בערך תקף.`
     }
-    return `“${value}” doesn’t start with a valid value.`
+    return `“${value}” אינו מתחיל בערך תקף.`
   },
 
   /**
    * Value is not a url.
    */
   url: function ({ name }) {
-    return `Please include a valid url.`
+    return `אנא כלול כתובת אתר חוקית.`
   }
 }
 
