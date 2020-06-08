@@ -3,6 +3,8 @@
  * to the list of exports here:
  */
 
+import ar from './locales/ar'
+
 import da from './locales/da'
 
 import de from './locales/de'
@@ -13,37 +15,35 @@ import es from './locales/es'
 
 import fr from './locales/fr'
 
+import he from './locales/he'
+
+import it from './locales/it'
+
 import ja from './locales/ja'
 
 import ko from './locales/ko'
+
+import nl from './locales/nl'
 
 import pt from './locales/pt'
 
 import ru from './locales/ru'
 
-import it from './locales/it'
-
-import he from './locales/he'
-
-import ar from './locales/ar'
-
-import nl from './locales/nl'
-
 /**
  * ✏️ Then add it to the list here:
  */
 export {
+  ar,
   da,
   de,
   en,
   es,
   fr,
+  he,
+  it,
   ja,
   ko,
-  pt,
+  nl,
   ru,
-  it,
-  he,
-  ar,
-  nl
+  pt
 }
