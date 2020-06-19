@@ -136,7 +136,7 @@ const localizedValidationMessages = {
     if (typeof value === 'string' && value) {
       return `“${s(value)}” jest niedozwoloną wartością pola ${name}.`
     }
-    return `To jest niedozwolone ${name}.`
+    return `Wartość jest niedozwolona w polu ${name}.`
   },
 
   /**
