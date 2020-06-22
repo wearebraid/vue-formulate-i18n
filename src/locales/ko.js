@@ -45,23 +45,23 @@ const localizedValidationMessages = {
    */
   after: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)}는 ${args[0]} 이후이어야 합니다.`
+      return `${s(name)} ${args[0]} 이후이어야 합니다.`
     }
-    return `${s(name)}는 미래의 날짜이어야 합니다.`
+    return `${s(name)} 미래의 날짜이어야 합니다.`
   },
 
   /**
    * The value is not a letter.
    */
   alpha: function ({ name }) {
-    return `${s(name)}은/는 알파벳만 사용할 수 있습니다.`
+    return `${s(name)} 알파벳만 사용할 수 있습니다.`
   },
 
   /**
    * Rule: checks if the value is alpha numeric
    */
   alphanumeric: function ({ name }) {
-    return `${s(name)}은/는 문자와 숫자만 사용할 수 있습니다.`
+    return `${s(name)} 문자와 숫자만 사용할 수 있습니다.`
   },
 
   /**
@@ -69,7 +69,7 @@ const localizedValidationMessages = {
    */
   before: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)}는 ${args[0]} 이전이어야 합니다.`
+      return `${s(name)} ${args[0]} 이전이어야 합니다.`
     }
     return `${s(name)}이전이어야 합니다.`
   },
@@ -80,16 +80,16 @@ const localizedValidationMessages = {
   between: function ({ name, value, args }) {
     const force = Array.isArray(args) && args[2] ? args[2] : false
     if ((!isNaN(value) && force !== 'length') || force === 'value') {
-      return `${s(name)}는 ${args[0]}와 ${args[1]}사이이어야 합니다.`
+      return `${s(name)} ${args[0]}와 ${args[1]}사이이어야 합니다.`
     }
-    return `${s(name)}은/는${args[0]}자애서 ${args[1]}자 사이이어야 합니다.`
+    return `${s(name)} ${args[0]}자애서 ${args[1]}자 사이이어야 합니다.`
   },
 
   /**
    * The confirmation field does not match
    */
   confirm: function ({ name, args }) {
-    return `${s(name)}은/는 일치하지 않습니다.`
+    return `${s(name)} 일치하지 않습니다.`
   },
 
   /**
@@ -97,7 +97,7 @@ const localizedValidationMessages = {
    */
   date: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)}은/는 유효한 날짜 형식이 아닙니다. 다음과 같은 형식으로 입력해 주세요: ${args[0]}`
+      return `${s(name)} 유효한 날짜 형식이 아닙니다. 다음과 같은 형식으로 입력해 주세요: ${args[0]}`
     }
     return `${s(name)}올바른 날짜 형식이 아닙니다.`
   },
@@ -116,7 +116,7 @@ const localizedValidationMessages = {
     if (!value) {
       return '유효한 이메일 주소를 입력해 주세요.'
     }
-    return `“${value}”은/는 유효한 이메일 주소가 아닙니다.`
+    return `“${value}” 유효한 이메일 주소가 아닙니다.`
   },
 
   /**
@@ -134,16 +134,16 @@ const localizedValidationMessages = {
    */
   in: function ({ name, value }) {
     if (typeof value === 'string' && value) {
-      return `“${s(value)}”은/는 허용된 ${name} 아닙니다.`
+      return `“${s(value)}” 허용된 ${name} 아닙니다.`
     }
-    return `${name}은/는 허용된 값이 아닙니다.`
+    return `${name} 허용된 값이 아닙니다.`
   },
 
   /**
    * Value is not a match.
    */
   matches: function ({ name }) {
-    return `${s(name)}은/는 허용 된 값이 아닙니다.`
+    return `${s(name)} 허용 된 값이 아닙니다.`
   },
 
   /**
@@ -151,20 +151,20 @@ const localizedValidationMessages = {
    */
   max: function ({ name, value, args }) {
     if (Array.isArray(value)) {
-      return `${name}은/는 ${args[0]}개의 항목만 선택 가능합니다.`
+      return `${name} ${args[0]}개의 항목만 선택 가능합니다.`
     }
     const force = Array.isArray(args) && args[1] ? args[1] : false
     if ((!isNaN(value) && force !== 'length') || force === 'value') {
-      return `${s(name)}은/는 ${args[0]}이하이어야 합니다.`
+      return `${s(name)} ${args[0]}이하이어야 합니다.`
     }
-    return `${s(name)}은/는 ${args[0]}자 이하이어야 합니다.`
+    return `${s(name)} ${args[0]}자 이하이어야 합니다.`
   },
 
   /**
    * The (field-level) error message for mime errors.
    */
   mime: function ({ name, args }) {
-    return `${s(name)}은/는 다음과 같은 파일 형식이어야 합니다: ${args[0] || '허용되는 파일 형식이 아닙니다.'}`
+    return `${s(name)} 다음과 같은 파일 형식이어야 합니다: ${args[0] || '허용되는 파일 형식이 아닙니다.'}`
   },
 
   /**
@@ -176,30 +176,30 @@ const localizedValidationMessages = {
     }
     const force = Array.isArray(args) && args[1] ? args[1] : false
     if ((!isNaN(value) && force !== 'length') || force === 'value') {
-      return `${s(name)}은/는 ${args[0]}이상이어야 합니다.`
+      return `${s(name)} ${args[0]}이상이어야 합니다.`
     }
-    return `${s(name)}은/는 ${args[0]}자 이상이어야 합니다.`
+    return `${s(name)} ${args[0]}자 이상이어야 합니다.`
   },
 
   /**
    * The field is not an allowed value
    */
   not: function ({ name, value }) {
-    return `“${value}”은/는 허용된 ${name} 아닙니다.`
+    return `“${value}” 허용된 ${name} 아닙니다.`
   },
 
   /**
    * The field is not a number
    */
   number: function ({ name }) {
-    return `${s(name)}는 숫자만 사용 가능합니다.`
+    return `${s(name)} 숫자만 사용 가능합니다.`
   },
 
   /**
    * Required field.
    */
   required: function ({ name }) {
-    return `${s(name)}은/는 필수 항목입니다.`
+    return `${s(name)} 필수 항목입니다.`
   },
 
   /**
@@ -209,7 +209,7 @@ const localizedValidationMessages = {
     if (!value) {
       return `유효한 값으로 시작하지 않습니다.`
     }
-    return `“${value}”은/는 유효한 값으로 시작하지 않습니다.`
+    return `“${value}” 유효한 값으로 시작하지 않습니다.`
   },
 
   /**
