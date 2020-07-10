@@ -5,6 +5,8 @@
 
 import ar from './locales/ar'
 
+import cs from './locales/cs'
+
 import da from './locales/da'
 
 import de from './locales/de'
@@ -36,6 +38,7 @@ import ru from './locales/ru'
  */
 export {
   ar,
+  cs,
   da,
   de,
   en,
