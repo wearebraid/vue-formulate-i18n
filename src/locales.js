@@ -32,24 +32,9 @@ import pl from './locales/pl'
 import pt from './locales/pt'
 
 import ru from './locales/ru'
+import zh from "./locales/zh";
 
 /**
  * ✏️ Then add it to the list here:
  */
-export {
-  ar,
-  cs,
-  da,
-  de,
-  en,
-  es,
-  fr,
-  he,
-  it,
-  ja,
-  ko,
-  nl,
-  ru,
-  pl,
-  pt
-}
+export { ar, cs, da, de, en, es, fr, he, it, ja, ko, nl, ru, pl, pt, zh };
