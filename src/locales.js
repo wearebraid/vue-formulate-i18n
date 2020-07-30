@@ -27,14 +27,17 @@ import ko from './locales/ko'
 
 import nl from './locales/nl'
 
+import lt from './locales/lt'
+
 import pl from './locales/pl'
 
 import pt from './locales/pt'
 
 import ru from './locales/ru'
+
 import zh from "./locales/zh";
 
 /**
  * ✏️ Then add it to the list here:
  */
-export { ar, cs, da, de, en, es, fr, he, it, ja, ko, nl, ru, pl, pt, zh };
+export { ar, cs, da, de, en, es, fr, he, it, ja, ko, nl, lt, ru, pl, pt, zh };
