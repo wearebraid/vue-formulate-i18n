@@ -3,7 +3,7 @@
  * language. Feel free to add additional helper methods to libs/formats if it
  * assists in creating good validation messages for your locale.
  */
-import { sentence as s } from "../libs/formats";
+import { sentence as s } from '../libs/formats'
 
 /**
  * This is the ISO 639-1 and (optionally) ISO 639-2 language "tag".
@@ -14,7 +14,7 @@ import { sentence as s } from "../libs/formats";
  * en
  * en-GB
  */
-const locale = "zh";
+const locale = 'zh'
 
 /**
  * This is an object of functions that each produce valid responses. There's no
@@ -36,7 +36,7 @@ const localizedValidationMessages = {
    * Valid accepted value.
    */
   accepted: function ({ name }) {
-    return `请同意${name}。`;
+    return `请同意${name}。`
   },
 
   /**
@@ -44,23 +44,23 @@ const localizedValidationMessages = {
    */
   after: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)} 必须在 ${args[0]} 之后。`;
+      return `${s(name)} 必须在 ${args[0]} 之后。`
     }
-    return `${s(name)} 必须是以后的日期。`;
+    return `${s(name)} 必须是以后的日期。`
   },
 
   /**
    * The value is not a letter.
    */
   alpha: function ({ name }) {
-    return `${s(name)} 只能包含字母。`;
+    return `${s(name)} 只能包含字母。`
   },
 
   /**
    * Rule: checks if the value is alpha numeric
    */
   alphanumeric: function ({ name }) {
-    return `${s(name)} 只能包含字母或数字。`;
+    return `${s(name)} 只能包含字母或数字。`
   },
 
   /**
@@ -68,27 +68,27 @@ const localizedValidationMessages = {
    */
   before: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)} 必须在 ${args[0]} 之前`;
+      return `${s(name)} 必须在 ${args[0]} 之前`
     }
-    return `${s(name)} 必须是以前的日期。`;
+    return `${s(name)} 必须是以前的日期。`
   },
 
   /**
    * The value is not between two numbers or lengths
    */
   between: function ({ name, value, args }) {
-    const force = Array.isArray(args) && args[2] ? args[2] : false;
-    if ((!isNaN(value) && force !== "length") || force === "value") {
-      return `${s(name)} 必须在 ${args[0]} 和 ${args[1]} 之间。`;
+    const force = Array.isArray(args) && args[2] ? args[2] : false
+    if ((!isNaN(value) && force !== 'length') || force === 'value') {
+      return `${s(name)} 必须在 ${args[0]} 和 ${args[1]} 之间。`
     }
-    return `${s(name)} 必须在 ${args[0]} 和 ${args[1]} 字符长度之间。`;
+    return `${s(name)} 必须在 ${args[0]} 和 ${args[1]} 字符长度之间。`
   },
 
   /**
    * The confirmation field does not match
    */
   confirm: function ({ name, args }) {
-    return `${s(name)} 不匹配。`;
+    return `${s(name)} 不匹配。`
   },
 
   /**
@@ -96,16 +96,16 @@ const localizedValidationMessages = {
    */
   date: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)} 日期无效，请使用 ${args[0]} 格式。`;
+      return `${s(name)} 日期无效，请使用 ${args[0]} 格式。`
     }
-    return `${s(name)} 日期无效。`;
+    return `${s(name)} 日期无效。`
   },
 
   /**
    * The default render method for error messages.
    */
   default: function ({ name }) {
-    return `此输入无效。`;
+    return `此输入无效。`
   },
 
   /**
@@ -113,9 +113,9 @@ const localizedValidationMessages = {
    */
   email: function ({ name, value }) {
     if (!value) {
-      return "请输入有效的电子邮箱地址。";
+      return '请输入有效的电子邮箱地址。'
     }
-    return `“${value}” 不是一个有效的电子邮箱地址。`;
+    return `“${value}” 不是一个有效的电子邮箱地址。`
   },
 
   /**
@@ -123,26 +123,26 @@ const localizedValidationMessages = {
    */
   endsWith: function ({ name, value }) {
     if (!value) {
-      return `无效的结尾值。`;
+      return `无效的结尾值。`
     }
-    return `“${value}” 包含无效的结尾值。`;
+    return `“${value}” 包含无效的结尾值。`
   },
 
   /**
    * Value is an allowed value.
    */
   in: function ({ name, value }) {
-    if (typeof value === "string" && value) {
-      return `“${s(value)}” 是 ${name} 不允许的值。`;
+    if (typeof value === 'string' && value) {
+      return `“${s(value)}” 是 ${name} 不允许的值。`
     }
-    return `${name} 包含不允许的值。`;
+    return `${name} 包含不允许的值。`
   },
 
   /**
    * Value is not a match.
    */
   matches: function ({ name }) {
-    return `${s(name)} 包含不允许的值。`;
+    return `${s(name)} 包含不允许的值。`
   },
 
   /**
@@ -150,20 +150,20 @@ const localizedValidationMessages = {
    */
   max: function ({ name, value, args }) {
     if (Array.isArray(value)) {
-      return `您最多可有 ${args[0]} 个 ${name}。`;
+      return `您最多可有 ${args[0]} 个 ${name}。`
     }
-    const force = Array.isArray(args) && args[1] ? args[1] : false;
-    if ((!isNaN(value) && force !== "length") || force === "value") {
-      return `${s(name)} 必须小于或等于 ${args[0]}.`;
+    const force = Array.isArray(args) && args[1] ? args[1] : false
+    if ((!isNaN(value) && force !== 'length') || force === 'value') {
+      return `${s(name)} 必须小于或等于 ${args[0]}.`
     }
-    return `${s(name)} 必须小于或等于 ${args[0]} 字符长度.`;
+    return `${s(name)} 必须小于或等于 ${args[0]} 字符长度.`
   },
 
   /**
    * The (field-level) error message for mime errors.
    */
   mime: function ({ name, args }) {
-    return `${s(name)} 格式必须是: ${args[0] || "无允许文件格式"}`;
+    return `${s(name)} 格式必须是: ${args[0] || '无允许文件格式'}`
   },
 
   /**
@@ -171,34 +171,34 @@ const localizedValidationMessages = {
    */
   min: function ({ name, value, args }) {
     if (Array.isArray(value)) {
-      return `您需要最少 ${args[0]} 个 ${name}.`;
+      return `您需要最少 ${args[0]} 个 ${name}.`
     }
-    const force = Array.isArray(args) && args[1] ? args[1] : false;
-    if ((!isNaN(value) && force !== "length") || force === "value") {
-      return `${s(name)} 最少是 ${args[0]}.`;
+    const force = Array.isArray(args) && args[1] ? args[1] : false
+    if ((!isNaN(value) && force !== 'length') || force === 'value') {
+      return `${s(name)} 最少是 ${args[0]}.`
     }
-    return `${s(name)} 最少 ${args[0]} 字符长度。`;
+    return `${s(name)} 最少 ${args[0]} 字符长度。`
   },
 
   /**
    * The field is not an allowed value
    */
   not: function ({ name, value }) {
-    return `“${value}” 是 ${name} 不被允许的值。`;
+    return `“${value}” 是 ${name} 不被允许的值。`
   },
 
   /**
    * The field is not a number
    */
   number: function ({ name }) {
-    return `${s(name)} 必须是数字。`;
+    return `${s(name)} 必须是数字。`
   },
 
   /**
    * Required field.
    */
   required: function ({ name }) {
-    return `${s(name)} 是必填项。`;
+    return `${s(name)} 是必填项。`
   },
 
   /**
@@ -206,18 +206,18 @@ const localizedValidationMessages = {
    */
   startsWith: function ({ name, value }) {
     if (!value) {
-      return `无效的起始值`;
+      return `无效的起始值`
     }
-    return `“${value}” 包含无效的起始值`;
+    return `“${value}” 包含无效的起始值`
   },
 
   /**
    * Value is not a url.
    */
   url: function ({ name }) {
-    return `请输入正确的网址。`;
-  },
-};
+    return `请输入正确的网址。`
+  }
+}
 
 /**
  * This creates a vue-formulate plugin that can be imported and used on each
@@ -226,7 +226,7 @@ const localizedValidationMessages = {
 export default function (instance) {
   instance.extend({
     locales: {
-      [locale]: localizedValidationMessages,
-    },
-  });
+      [locale]: localizedValidationMessages
+    }
+  })
 }
