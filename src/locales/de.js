@@ -177,7 +177,7 @@ const localizedValidationMessages = {
     if ((!isNaN(value) && force !== 'length') || force === 'value') {
       return `${s(name)} muss größer als ${args[0]} sein.`
     }
-    return `${s(name)} must ${args[0]} oder mehr Zeichen lang sein.`
+    return `${s(name)} muss ${args[0]} oder mehr Zeichen lang sein.`
   },
 
   /**
