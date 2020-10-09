@@ -37,7 +37,7 @@ const localizedValidationMessages = {
    * Valid accepted value.
    */
   accepted: function ({ name }) {
-    return `Molimo Vas prihvatite ${name}.`
+    return `Molimo Vas da prihvatite ${name}.`
   },
 
   /**
@@ -143,7 +143,7 @@ const localizedValidationMessages = {
    * Value is not a match.
    */
   matches: function ({ name }) {
-    return `${s(name)} nije dozvoljena vrednost.`
+    return `${s(name)} nije dozvoljena vrednost za ovo polje.`
   },
 
   /**
@@ -164,7 +164,7 @@ const localizedValidationMessages = {
    * The (field-level) error message for mime errors.
    */
   mime: function ({ name, args }) {
-    return `${s(name)} mora biti tipa: ${args[0] || 'Format datoteke nije dozvoljen.'}`
+    return `${s(name)} mora biti jedan sledecih formata: ${args[0] || 'Format datoteke nije dozvoljen.'}`
   },
 
   /**
@@ -185,7 +185,7 @@ const localizedValidationMessages = {
    * The field is not an allowed value
    */
   not: function ({ name, value }) {
-    return `“${value}” nije dozvoljena vrednost ${name}.`
+    return `“${value}” nije dozvoljena vrednost za polje ${name}.`
   },
 
   /**
@@ -199,7 +199,7 @@ const localizedValidationMessages = {
    * Required field.
    */
   required: function ({ name }) {
-    return `${s(name)} je obavezno.`
+    return `${s(name)} je obavezno polje.`
   },
 
   /**
