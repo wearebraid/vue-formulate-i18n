@@ -64,6 +64,5 @@
     "vue-template-compiler": "^2.6.12",
     "vue-template-es2015-compiler": "^1.9.1",
     "watch": "^1.0.2"
-  },
-  "dependencies": {}
+  }
 }

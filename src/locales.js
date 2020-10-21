@@ -5,6 +5,8 @@
 
 import ar from './locales/ar'
 
+import ca from './locales/ca'
+
 import cs from './locales/cs'
 
 import da from './locales/da'
@@ -48,4 +50,4 @@ import zh from './locales/zh'
 /**
  * ✏️ Then add it to the list here:
  */
-export { ar, cs, da, de, en, es, fr, he, it, ja, ko, nb, nl, lt, ru, pl, pt, sr, sv, th, zh }
+export { ar, ca, cs, da, de, en, es, fr, he, it, ja, ko, nb, nl, lt, ru, pl, pt, sr, sv, th, zh }
