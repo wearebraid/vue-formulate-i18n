@@ -39,6 +39,8 @@ import pt from './locales/pt'
 
 import ru from './locales/ru'
 
+import sk from './locales/sk'
+
 import sr from './locales/sr'
 
 import sv from './locales/sv'
@@ -50,4 +52,4 @@ import zh from './locales/zh'
 /**
  * ✏️ Then add it to the list here:
  */
-export { ar, ca, cs, da, de, en, es, fr, he, it, ja, ko, nb, nl, lt, ru, pl, pt, sr, sv, th, zh }
+export { ar, ca, cs, da, de, en, es, fr, he, it, ja, ko, nb, nl, lt, ru, pl, pt, sk, sr, sv, th, zh }
