@@ -47,7 +47,7 @@ const localizedValidationMessages = {
     if (Array.isArray(args) && args.length) {
       return `${s(name)} musí byť neskôr ako ${args[0]}.`
     }
-    return `Pre ${s(name)} je potrebné zvoliť neskorší dátum.`
+    return `Pre ${name} je potrebné zvoliť neskorší dátum.`
   },
 
   /**
@@ -71,7 +71,7 @@ const localizedValidationMessages = {
     if (Array.isArray(args) && args.length) {
       return `${s(name)} musí byť skôr než ${args[0]}.`
     }
-    return `Pre ${s(name)} je potrebné zvoliť skorší dátum.`
+    return `Pre ${name} je potrebné zvoliť skorší dátum.`
   },
 
   /**
@@ -114,7 +114,7 @@ const localizedValidationMessages = {
    */
   email: function ({ name, value }) {
     if (!value) {
-      return 'Prosím, uveď platnú emailovú adresu..'
+      return 'Prosím, uveď platnú emailovú adresu.'
     }
     return `“${value}” nie je platná emailová adresa.`
   },
@@ -134,7 +134,7 @@ const localizedValidationMessages = {
    */
   in: function ({ name, value }) {
     if (typeof value === 'string' && value) {
-      return `“${s(value)}” nie je povolená hodnota pre ${name}.`
+      return `“${value}” nie je povolená hodnota pre ${name}.`
     }
     return `Toto nie je povolená hodnota pre ${name}.`
   },
@@ -143,7 +143,7 @@ const localizedValidationMessages = {
    * Value is not a match.
    */
   matches: function ({ name }) {
-    return `${s(name)} nie je povolená hodnota.`
+    return `Pole ${name} neobsahuje povolenú hodnotu.`
   },
 
   /**
