@@ -51,7 +51,7 @@
     "jest": "^25.5.4",
     "jest-vue-preprocessor": "^1.7.1",
     "node-sass": "^4.14.1",
-    "postcss": "^7.0.32",
+    "postcss": "^8.2.10",
     "postcss-cli": "^7.1.2",
     "rollup": "^1.31.1",
     "rollup-plugin-internal": "^1.0.4",
