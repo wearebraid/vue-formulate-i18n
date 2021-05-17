@@ -37,7 +37,7 @@ const localizedValidationMessages = {
    * Valid accepted value.
    */
   accepted: function ({ name }) {
-    return `Please accept the ${name}.`
+    return `Hyväksy ${name}.`
   },
 
   /**
@@ -80,16 +80,16 @@ const localizedValidationMessages = {
   between: function ({ name, value, args }) {
     const force = Array.isArray(args) && args[2] ? args[2] : false
     if ((!isNaN(value) && force !== 'length') || force === 'value') {
-      return `${s(name)} kenttä tulisi ${args[0]} and ${args[1]}.`
+      return `${s(name)} kentän arvo tulee olla ${args[0]} ja ${args[1]} väliltä.`
     }
-    return `${s(name)} must be between ${args[0]} and ${args[1]} characters long.`
+    return `${s(name)} kentän arvon pituus tulee olla ${args[0]} ja ${args[1]} väliltä.`
   },
 
   /**
    * The confirmation field does not match
    */
   confirm: function ({ name, args }) {
-    return `${s(name)} does not match.`
+    return `${s(name)} kenttä ei täsmää.`
   },
 
   /**
