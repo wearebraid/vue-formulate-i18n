@@ -19,9 +19,13 @@ import es from './locales/es'
 
 import fr from './locales/fr'
 
+import ha from './locales/ha'
+
 import he from './locales/he'
 
 import hu from './locales/hu'
+
+import ig from './locales/ig'
 
 import it from './locales/it'
 
@@ -53,9 +57,11 @@ import tr from './locales/tr'
 
 import vi from './locales/vi'
 
+import yo from './locales/yo'
+
 import zh from './locales/zh'
 
 /**
  * ✏️ Then add it to the list here:
  */
-export { ar, ca, cs, da, de, en, es, fr, he, hu, it, ja, ko, nb, nl, lt, ru, pl, pt, sk, sr, sv, th, tr, vi, zh }
+export { ar, ca, cs, da, de, en, es, fr, ha, he, hu, ig, it, ja, ko, nb, nl, lt, ru, pl, pt, sk, sr, sv, th, tr, vi, yo, zh }
