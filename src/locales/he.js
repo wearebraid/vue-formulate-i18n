@@ -114,9 +114,9 @@ const localizedValidationMessages = {
    */
   email: function ({ name, value }) {
     if (!value) {
-      return 'אנא הכנס כתובת אימייל תקין.'
+      return 'אנא הכנס כתובת אימייל תקינה.'
     }
-    return `“${value}” אינו כתובת אימייל תקין.`
+    return `“${value}” אינה כתובת אימייל תקינה.`
   },
 
   /**
