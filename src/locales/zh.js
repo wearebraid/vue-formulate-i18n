@@ -105,7 +105,7 @@ const localizedValidationMessages = {
    * The default render method for error messages.
    */
   default: function ({ name }) {
-    return `此输入无效。`
+    return `抱歉，您输入的内容不符合格式要求。`
   },
 
   /**
