@@ -23,6 +23,8 @@ import he from './locales/he'
 
 import hu from './locales/hu'
 
+import id from './locales/id'
+
 import it from './locales/it'
 
 import ja from './locales/ja'
@@ -58,4 +60,4 @@ import zh from './locales/zh'
 /**
  * ✏️ Then add it to the list here:
  */
-export { ar, ca, cs, da, de, en, es, fr, he, hu, it, ja, ko, nb, nl, lt, ru, pl, pt, sk, sr, sv, th, tr, vi, zh }
+export { ar, ca, cs, da, de, en, es, fr, he, hu, id, it, ja, ko, nb, nl, lt, ru, pl, pt, sk, sr, sv, th, tr, vi, zh }
