@@ -69,7 +69,7 @@ const localizedValidationMessages = {
    */
   before: function ({ name, args }) {
     if (Array.isArray(args) && args.length) {
-      return `${s(name)} harus setelah ${args[0]}.`
+      return `${s(name)} harus sebelum ${args[0]}.`
     }
     return `${s(name)} harus tanggal sebelumnya.`
   },
@@ -116,7 +116,7 @@ const localizedValidationMessages = {
     if (!value) {
       return 'Harap masukkan alamat email yang sah.'
     }
-    return `“${value}” bukan alamat email yang sah.`
+    return `“${value}” bukan merupakan alamat email yang sah.`
   },
 
   /**
